@@ -1,722 +1,501 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Network - Protect Earth</title>
+    <title>感悟经典，滋养心灵</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Microsoft YaHei', 'Segoe UI', sans-serif;
         }
-
-        :root {
-            --primary: #2e7d32;
-            --secondary: #4caf50;
-            --accent: #8bc34a;
-            --light: #e8f5e9;
-            --dark: #1b5e20;
-            --text: #333333;
-            --white: #ffffff;
-        }
-
+        
         body {
-            background-color: var(--light);
-            color: var(--text);
+            background: linear-gradient(135deg, #f5f9e8 0%, #e8f4e1 100%);
+            color: #3a4a3e;
+            min-height: 100vh;
+            padding: 20px;
             line-height: 1.6;
         }
-
-        header {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            color: var(--white);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
+        
         .container {
-            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 20px;
         }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-
-        .logo i {
-            font-size: 2rem;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li {
-            margin-left: 2rem;
-        }
-
-        nav ul li a {
-            color: var(--white);
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            padding: 0.5rem 0;
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 30px;
             position: relative;
         }
-
-        nav ul li a:hover {
-            color: var(--accent);
-        }
-
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--accent);
-            transition: width 0.3s ease;
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: var(--white);
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--accent);
-            color: var(--white);
-            padding: 0.8rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .btn:hover {
-            background-color: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-        }
-
-        section {
-            padding: 5rem 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
+        
+        h1 {
+            font-size: 2.8rem;
+            color: #2d5a27;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
             position: relative;
             display: inline-block;
         }
-
-        .section-title h2::after {
+        
+        h1:after {
             content: '';
             position: absolute;
             bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
+            width: 150px;
             height: 4px;
-            background-color: var(--accent);
+            background: linear-gradient(to right, #6a994e, #386641);
             border-radius: 2px;
         }
-
-        .section-title p {
-            color: var(--text);
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #4a7c59;
             max-width: 700px;
             margin: 0 auto;
+            font-style: italic;
         }
-
-        .about-content {
+        
+        .poems-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
-
-        .about-img {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-
-        .about-img img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-
-        .about-img:hover img {
-            transform: scale(1.05);
-        }
-
-        .about-text h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
-        }
-
-        .about-text p {
-            margin-bottom: 1.5rem;
-        }
-
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 2rem 1rem;
-            background-color: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .stat-item:hover {
-            transform: translateY(-10px);
-        }
-
-        .stat-item i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .stat-item h3 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-item p {
-            color: var(--text);
-        }
-
-        .initiatives {
-            background-color: var(--white);
-        }
-
-        .initiatives-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .initiative-card {
-            background-color: var(--light);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .initiative-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .initiative-img {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .initiative-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .initiative-card:hover .initiative-img img {
-            transform: scale(1.1);
-        }
-
-        .initiative-content {
-            padding: 1.5rem;
-        }
-
-        .initiative-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
-
-        .initiative-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .cta {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            color: var(--white);
-            text-align: center;
-            padding: 5rem 0;
-        }
-
-        .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .cta p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .cta .btn {
-            background-color: var(--white);
-            color: var(--primary);
-        }
-
-        .cta .btn:hover {
-            background-color: var(--accent);
-            color: var(--white);
-        }
-
-        footer {
-            background-color: var(--dark);
-            color: var(--white);
-            padding: 3rem 0 1rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-column h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
+        
+        .poem-card {
+            background: linear-gradient(145deg, #f4fae6, #f0f7e9);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(106, 153, 78, 0.15);
+            transition: all 0.4s ease;
             position: relative;
+            overflow: hidden;
+            border-left: 6px solid #6a994e;
+        }
+        
+        .poem-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(106, 153, 78, 0.25);
+        }
+        
+        .poem-card:nth-child(2) {
+            border-left-color: #5a8c4a;
+        }
+        
+        .poem-card:nth-child(3) {
+            border-left-color: #4a7c59;
+        }
+        
+        .poem-card:nth-child(4) {
+            border-left-color: #3a6b48;
+        }
+        
+        .poem-card:nth-child(5) {
+            border-left-color: #2a5a37;
+        }
+        
+        .poem-title {
+            font-size: 1.6rem;
+            color: #386641;
+            margin-bottom: 15px;
             padding-bottom: 10px;
+            border-bottom: 2px dashed #6a994e;
         }
-
-        .footer-column h3::after {
-            content: '';
+        
+        .poem-author {
+            color: #4a7c59;
+            font-style: italic;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .poem-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+        
+        .poem-content p {
+            margin-bottom: 12px;
+            text-indent: 2em;
+        }
+        
+        .poem-explanation {
+            background-color: rgba(106, 153, 78, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            color: #4a5a3e;
+            border-left: 3px solid #6a994e;
+            margin-top: 15px;
+        }
+        
+        .poem-icon {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--accent);
+            top: 20px;
+            right: 20px;
+            color: rgba(106, 153, 78, 0.2);
+            font-size: 2.5rem;
         }
-
-        .footer-column p {
-            margin-bottom: 1rem;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links li a {
-            color: var(--light);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .footer-links li a:hover {
-            color: var(--accent);
-            padding-left: 5px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: var(--white);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background-color: var(--accent);
-            transform: translateY(-5px);
-        }
-
-        .copyright {
+        
+        footer {
             text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 20px;
+            margin-top: 60px;
+            color: #4a7c59;
+            border-top: 1px solid rgba(106, 153, 78, 0.2);
         }
-
-        .mobile-menu {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
+        
+        .quote {
+            font-size: 1.1rem;
+            font-style: italic;
+            margin: 30px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid #6a994e;
         }
-
-        @media (max-width: 992px) {
-            .about-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .initiatives-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .footer-content {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
+        
+        .heart {
+            color: #4a7c59;
+            animation: heartbeat 1.5s infinite;
+            display: inline-block;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            5% { transform: scale(1.2); }
+            10% { transform: scale(1.1); }
+            15% { transform: scale(1.3); }
+            50% { transform: scale(1); }
+            100% { transform: scale(1); }
+        }
+        
+        /* 动画效果 */
+        .poem-card {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s forwards;
+        }
+        
+        .poem-card:nth-child(1) { animation-delay: 0.1s; }
+        .poem-card:nth-child(2) { animation-delay: 0.2s; }
+        .poem-card:nth-child(3) { animation-delay: 0.3s; }
+        .poem-card:nth-child(4) { animation-delay: 0.4s; }
+        .poem-card:nth-child(5) { animation-delay: 0.5s; }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
-
+        
+        /* 响应式设计 */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            nav ul {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--primary);
-                flex-direction: column;
-                padding: 1rem 0;
-                text-align: center;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            }
-            
-            nav ul.active {
-                display: flex;
-            }
-            
-            nav ul li {
-                margin: 0;
-                padding: 0.8rem 0;
-            }
-            
-            .mobile-menu {
-                display: block;
-            }
-            
-            .initiatives-grid {
+            .poems-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
             }
             
-            .footer-content {
-                grid-template-columns: 1fr;
+            h1 {
+                font-size: 2.2rem;
             }
             
-            .stats {
-                grid-template-columns: 1fr;
+            .poem-card {
+                padding: 20px;
             }
         }
-
-        /* Animation for stats counter */
-        .counter {
-            transition: all 0.5s ease;
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 10px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .poem-title {
+                font-size: 1.4rem;
+            }
+        }
+        
+        /* 新增样式：自然元素装饰 */
+        .leaf-decoration {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        .leaf-1 {
+            top: 10%;
+            left: 5%;
+            transform: rotate(45deg);
+        }
+        
+        .leaf-2 {
+            top: 15%;
+            right: 8%;
+            transform: rotate(-20deg);
+        }
+        
+        .leaf-3 {
+            bottom: 15%;
+            left: 7%;
+            transform: rotate(120deg);
+        }
+        
+        .leaf-icon {
+            color: #6a994e;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container nav-container">
-            <div class="logo">
-                <i class="fas fa-seedling"></i>
-                <span>Green Network</span>
-            </div>
-            <nav>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#initiatives">Initiatives</a></li>
-                    <li><a href="#get-involved">Get Involved</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+    <!-- 装饰性叶子元素 -->
+    <div class="leaf-decoration leaf-1">
+        <i class="fas fa-leaf leaf-icon" style="font-size: 60px;"></i>
+    </div>
+    <div class="leaf-decoration leaf-2">
+        <i class="fas fa-leaf leaf-icon" style="font-size: 45px;"></i>
+    </div>
+    <div class="leaf-decoration leaf-3">
+        <i class="fas fa-leaf leaf-icon" style="font-size: 50px;"></i>
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-leaf"></i> 人生格言诗词集</h1>
+            <p class="subtitle">五首富有哲理的古诗词，在暖绿色调中感悟生命智慧，如沐春风，滋养心灵。</p>
+        </header>
+        
+        <div class="quote">
+            <i class="fas fa-quote-left" style="color: #6a994e;"></i> 诗词如春风化雨，润物无声；智慧如青山绿水，历久弥新。这些格言诗词如同春天的新芽，带来生机与希望。<i class="fas fa-quote-right" style="color: #6a994e;"></i>
         </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-content">
-            <h1>Protect Our Planet, Preserve Our Future</h1>
-            <p>Join the global movement to create a sustainable world through conservation, education, and community action.</p>
-            <a href="#get-involved" class="btn">Join Our Network</a>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Green Network</h2>
-                <p>We are a global community dedicated to environmental protection and sustainable development.</p>
-            </div>
-            <div class="about-content">
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team planting trees">
+        
+        <div class="poems-grid">
+            <!-- 第一首诗词 -->
+            <div class="poem-card">
+                <i class="fas fa-seedling poem-icon"></i>
+                <h2 class="poem-title">《行路难·其一》节选</h2>
+                <span class="poem-author">—— 李白（唐）</span>
+                <div class="poem-content">
+                    <p>金樽清酒斗十千，玉盘珍羞直万钱。</p>
+                    <p>停杯投箸不能食，拔剑四顾心茫然。</p>
+                    <p>欲渡黄河冰塞川，将登太行雪满山。</p>
+                    <p>闲来垂钓碧溪上，忽复乘舟梦日边。</p>
+                    <p><strong>行路难，行路难，多歧路，今安在？</strong></p>
+                    <p><strong>长风破浪会有时，直挂云帆济沧海。</strong></p>
                 </div>
-                <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>Green Network is committed to creating a sustainable future by protecting natural ecosystems, promoting renewable energy, and empowering communities to take environmental action.</p>
-                    <p>Founded in 2010, we've grown from a small grassroots organization to an international network with over 50,000 members across 120 countries.</p>
-                    <p>Our approach combines scientific research, community engagement, and policy advocacy to address the most pressing environmental challenges of our time.</p>
-                    <a href="#" class="btn">Learn More</a>
+                <div class="poem-explanation">
+                    <i class="fas fa-lightbulb" style="color: #6a994e;"></i> 格言启示：即使前路艰难险阻，也要保持乐观豁达的心态。相信总有一天能够乘风破浪，实现理想。
                 </div>
             </div>
-            <div class="stats">
-                <div class="stat-item">
-                    <i class="fas fa-tree"></i>
-                    <h3 class="counter" data-target="2500000">0</h3>
-                    <p>Trees Planted</p>
+            
+            <!-- 第二首诗词 -->
+            <div class="poem-card">
+                <i class="fas fa-mountain poem-icon"></i>
+                <h2 class="poem-title">《登鹳雀楼》</h2>
+                <span class="poem-author">—— 王之涣（唐）</span>
+                <div class="poem-content">
+                    <p>白日依山尽，黄河入海流。</p>
+                    <p><strong>欲穷千里目，更上一层楼。</strong></p>
                 </div>
-                <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <h3 class="counter" data-target="50000">0</h3>
-                    <p>Active Members</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-globe-americas"></i>
-                    <h3 class="counter" data-target="120">0</h3>
-                    <p>Countries Reached</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-recycle"></i>
-                    <h3 class="counter" data-target="1500">0</h3>
-                    <p>Cleanup Projects</p>
+                <div class="poem-explanation">
+                    <i class="fas fa-lightbulb" style="color: #6a994e;"></i> 格言启示：人生要有不断进取的精神，只有站得更高，才能看得更远，才能领略更广阔的风景。
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Initiatives Section -->
-    <section class="initiatives" id="initiatives">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Initiatives</h2>
-                <p>Discover the key programs and projects we're implementing to protect our planet.</p>
+            
+            <!-- 第三首诗词 -->
+            <div class="poem-card">
+                <i class="fas fa-tree poem-icon"></i>
+                <h2 class="poem-title">《竹石》</h2>
+                <span class="poem-author">—— 郑燮（清）</span>
+                <div class="poem-content">
+                    <p>咬定青山不放松，立根原在破岩中。</p>
+                    <p>千磨万击还坚劲，任尔东西南北风。</p>
+                </div>
+                <div class="poem-explanation">
+                    <i class="fas fa-lightbulb" style="color: #6a994e;"></i> 格言启示：人生应当如竹子般坚韧不拔，无论遇到多少困难和打击，都要坚守自己的信念和原则。
+                </div>
             </div>
-            <div class="initiatives-grid">
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://dialogue.earth/content/uploads/2021/04/lessons-from-the-rush-to-reforest-china-dialogue-2400x1599.jpg" alt="Reforestation">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Global Reforestation</h3>
-                        <p>Planting millions of trees worldwide to restore ecosystems, combat climate change, and protect biodiversity.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
+            
+            <!-- 第四首诗词 -->
+            <div class="poem-card">
+                <i class="fas fa-water poem-icon"></i>
+                <h2 class="poem-title">《观书有感·其一》</h2>
+                <span class="poem-author">—— 朱熹（宋）</span>
+                <div class="poem-content">
+                    <p>半亩方塘一鉴开，天光云影共徘徊。</p>
+                    <p><strong>问渠那得清如许？为有源头活水来。</strong></p>
                 </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Ocean Conservation">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Ocean Conservation</h3>
-                        <p>Protecting marine ecosystems, reducing plastic pollution, and promoting sustainable fishing practices.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
+                <div class="poem-explanation">
+                    <i class="fas fa-lightbulb" style="color: #6a994e;"></i> 格言启示：只有不断学习新知识，接受新事物，才能保持思想的活跃与进步，心灵才会永远澄明如镜。
                 </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Renewable Energy">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Renewable Energy</h3>
-                        <p>Promoting solar, wind, and other clean energy sources to reduce dependence on fossil fuels.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
+            </div>
+            
+            <!-- 第五首诗词 -->
+            <div class="poem-card">
+                <i class="fas fa-spa poem-icon"></i>
+                <h2 class="poem-title">《赋得古原草送别》节选</h2>
+                <span class="poem-author">—— 白居易（唐）</span>
+                <div class="poem-content">
+                    <p>离离原上草，一岁一枯荣。</p>
+                    <p><strong>野火烧不尽，春风吹又生。</strong></p>
+                </div>
+                <div class="poem-explanation">
+                    <i class="fas fa-lightbulb" style="color: #6a994e;"></i> 格言启示：生命具有顽强的韧性，即使遭遇艰难困苦，只要生命力不息，总有重生的机会和希望。
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta" id="get-involved">
-        <div class="container">
-            <h2>Join Our Global Movement</h2>
-            <p>Together, we can create a sustainable future for generations to come. Every action counts, no matter how small.</p>
-            <a href="#" class="btn">Become a Member</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>Green Network</h3>
-                    <p>We are dedicated to protecting our planet through collaborative action, education, and sustainable solutions.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#initiatives">Initiatives</a></li>
-                        <li><a href="#get-involved">Get Involved</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Our Programs</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Reforestation</a></li>
-                        <li><a href="#">Ocean Cleanup</a></li>
-                        <li><a href="#">Wildlife Protection</a></li>
-                        <li><a href="#">Climate Education</a></li>
-                        <li><a href="#">Sustainable Agriculture</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Copper Creek Drive, New York</p>
-                    <p><i class="fas fa-phone"></i> +1 (312) 171-0771</p>
-                    <p><i class="fas fa-envelope"></i> support@greennetwork.org</p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Green Network. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+        
+        <footer>
+            <p>© 2026 人生格言诗词集 | 感悟经典，滋养心灵</p>
+            <p>设计制作：用心整理 <span class="heart">❤</span></p>
+            <p style="margin-top: 15px; font-size: 0.9rem;">
+                <i class="fas fa-leaf" style="color: #6a994e;"></i> 诗词如春雨，润物细无声。每日一读，心境澄明。
+            </p>
+        </footer>
+    </div>
 
     <script>
-        // Mobile Menu Toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('active');
-        });
-
-        // Counter Animation
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter');
-            const speed = 200; // The lower the slower
-            
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                
-                const inc = target / speed;
-                
-                if(count < target) {
-                    counter.innerText = Math.ceil(count + inc);
-                    setTimeout(animateCounters, 1);
-                } else {
-                    counter.innerText = target;
-                }
+        // 添加卡片悬停效果增强
+        document.querySelectorAll('.poem-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
             });
-        }
-
-        // Initialize counters when page loads
-        window.addEventListener('load', animateCounters);
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+        
+        // 页面加载完成后添加一个简单的欢迎提示
+        window.addEventListener('load', function() {
+            console.log("欢迎来到人生格言诗词集！愿这些诗词为您带来宁静与启发。");
+            
+            // 为每首诗词添加点击效果
+            document.querySelectorAll('.poem-card').forEach((card, index) => {
+                card.addEventListener('click', function() {
+                    const titles = [
+                        "行路难，行路难，多歧路，今安在？",
+                        "欲穷千里目，更上一层楼。",
+                        "千磨万击还坚劲，任尔东西南北风。",
+                        "问渠那得清如许？为有源头活水来。",
+                        "野火烧不尽，春风吹又生。"
+                    ];
+                    
+                    // 创建自定义弹窗
+                    const modal = document.createElement('div');
+                    modal.style.cssText = `
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba(0,0,0,0.5);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 1000;
+                    `;
+                    
+                    const modalContent = document.createElement('div');
+                    modalContent.style.cssText = `
+                        background: linear-gradient(145deg, #f4fae6, #f0f7e9);
+                        padding: 30px;
+                        border-radius: 15px;
+                        max-width: 500px;
+                        width: 90%;
+                        text-align: center;
+                        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+                        border-left: 6px solid #6a994e;
+                    `;
+                    
+                    const title = document.createElement('h3');
+                    title.style.cssText = `
+                        color: #386641;
+                        margin-bottom: 15px;
+                        font-size: 1.4rem;
+                    `;
+                    title.textContent = `第 ${index+1} 首诗词`;
+                    
+                    const quote = document.createElement('p');
+                    quote.style.cssText = `
+                        color: #4a5a3e;
+                        font-size: 1.2rem;
+                        font-style: italic;
+                        margin-bottom: 20px;
+                        line-height: 1.6;
+                    `;
+                    quote.textContent = titles[index];
+                    
+                    const closeBtn = document.createElement('button');
+                    closeBtn.style.cssText = `
+                        background-color: #6a994e;
+                        color: white;
+                        border: none;
+                        padding: 10px 25px;
+                        border-radius: 5px;
+                        cursor: pointer;
+                        font-size: 1rem;
+                        transition: background-color 0.3s;
+                    `;
+                    closeBtn.textContent = '关闭';
+                    closeBtn.addEventListener('mouseenter', () => {
+                        closeBtn.style.backgroundColor = '#5a8c4a';
+                    });
+                    closeBtn.addEventListener('mouseleave', () => {
+                        closeBtn.style.backgroundColor = '#6a994e';
+                    });
+                    closeBtn.addEventListener('click', () => {
+                        document.body.removeChild(modal);
                     });
                     
-                    document.querySelector('nav ul').classList.remove('active');
-                }
+                    modalContent.appendChild(title);
+                    modalContent.appendChild(quote);
+                    modalContent.appendChild(closeBtn);
+                    modal.appendChild(modalContent);
+                    document.body.appendChild(modal);
+                    
+                    // 点击模态框外部也可以关闭
+                    modal.addEventListener('click', (e) => {
+                        if(e.target === modal) {
+                            document.body.removeChild(modal);
+                        }
+                    });
+                });
+            });
+            
+            // 添加叶子飘动效果
+            const leaves = document.querySelectorAll('.leaf-decoration');
+            leaves.forEach((leaf, index) => {
+                // 初始位置
+                let x = parseInt(leaf.style.left || '0');
+                let y = parseInt(leaf.style.top || '0');
+                let xDirection = Math.random() > 0.5 ? 1 : -1;
+                let yDirection = Math.random() > 0.5 ? 1 : -1;
+                
+                // 轻微浮动动画
+                setInterval(() => {
+                    const moveX = Math.sin(Date.now() / 2000 + index) * 2;
+                    const moveY = Math.cos(Date.now() / 2000 + index) * 2;
+                    leaf.style.transform = `translate(${moveX}px, ${moveY}px) rotate(${45 + moveX*2}deg)`;
+                }, 50);
             });
         });
     </script>
 </body>
-
 </html>
